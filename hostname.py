@@ -28,29 +28,23 @@ def init(props):
 
 def executeChallenge():
     print("Starting execute")
-    
-    
+        
     #mecanismo de lock BEGIN, para garantizar una sola interaccion con user a la vez
     #-----------------------
     #no lo necesito porque no es intrusivo
     #lock.lockIN("hostname")
     
-    #pedimos password
+    #obtenemos hostname
     hostname = socket.gethostname()
 
-    #mecanismo lock out
+    #mecanismo lock out. no lo usamos porque no es necesario en este challenge (no es intrusivo)
     #lock.lockOUT("hostname")
     
-    #ahora comparamos con la correcta
-    #hostname_start=props_dict["hostname_start"]
+    #ahora extraemos la parte del hostname comun a los PC corporativos
     lenstart=props_dict["hostname_len"]
-    #if fnmatch.fnmatch(hostname,hostname_start+"*"):
-    #    print ("el pc es corporativo. Hostname=", hostname)
     print ("your hostname=", hostname)
     cad= hostname[:lenstart]
-    print ("subkey is ", cad)
-    
-    
+    #print ("subkey is ", cad)
     
     key = bytes(cad,'utf-8')
     key_size = len(key)
@@ -61,12 +55,9 @@ def executeChallenge():
 
 
 
-    
-
-
 if __name__ == "__main__":
-    #mode "parental" o "normal"
-    midict={"hostname_len": 2} #"clave": "clavesecreta", "mode":"parental"}
+    
+    midict={"hostname_len": 2} 
     init(midict)
     executeChallenge()
 
