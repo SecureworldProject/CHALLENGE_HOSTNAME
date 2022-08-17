@@ -42,12 +42,13 @@ def executeChallenge():
     #lock.lockOUT("hostname")
     
     #ahora comparamos con la correcta
-    hostname_start=props_dict["hostname_start"]
-    lenstart=len (hostname_start)
-    if fnmatch.fnmatch(hostname,hostname_start+"*"):
-        print ("el pc es corporativo. Hostname=", hostname)
+    #hostname_start=props_dict["hostname_start"]
+    lenstart=props_dict["hostname_len"]
+    #if fnmatch.fnmatch(hostname,hostname_start+"*"):
+    #    print ("el pc es corporativo. Hostname=", hostname)
+    print ("your hostname=", hostname)
     cad= hostname[:lenstart]
-    print (cad)
+    print ("subkey is ", cad)
     
     
     
@@ -65,7 +66,7 @@ def executeChallenge():
 
 if __name__ == "__main__":
     #mode "parental" o "normal"
-    midict={"hostname_start": "N-"} #"clave": "clavesecreta", "mode":"parental"}
+    midict={"hostname_len": 2} #"clave": "clavesecreta", "mode":"parental"}
     init(midict)
     executeChallenge()
 
