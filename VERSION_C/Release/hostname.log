@@ -1,0 +1,4 @@
+﻿  dllmain.cpp
+c:\proyectos\proyectos09\secureworld\sw3\challenge_hostname_c\hostname\dllmain.cpp(163): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  pch.cpp
+c:\proyectos\proyectos09\secureworld\sw3\challenge_hostname_c\hostname\pch.cpp(6): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
