@@ -7,7 +7,7 @@ import time
 #pip3 install easygui
 # o bien py -m pip install easygui
 import easygui 
-import lock
+#import lock
 
 import socket
 import fnmatch
