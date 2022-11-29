@@ -1,0 +1,10 @@
+{
+"FileName": "hostname.dll",
+"Description": "challenge de hostname de organizacion",
+"Props": {
+  "validity_time": 3600,
+  "refresh_time": 10,
+  "hostname_len": 2
+},
+"Requirements": "none" 
+}

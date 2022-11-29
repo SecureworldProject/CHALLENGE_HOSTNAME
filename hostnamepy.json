@@ -1,0 +1,11 @@
+{
+"FileName": "challenge_loader_python.dll",
+"Description": "challenge de hostname de organizacion",
+"Props": {
+  "module_python": "hostname",
+  "validity_time": 3600,
+  "refresh_time": 10,
+  "hostname_len": 2
+},
+"Requirements": "none" 
+}
